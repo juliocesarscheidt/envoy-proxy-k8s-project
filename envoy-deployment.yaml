@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: envoy
+  namespace: default
+  labels:
+    app: envoy
+
+spec:
+  selector:
+    matchLabels:
+      app: envoy
+
+  template:
+    metadata:
+      labels:
+        app: envoy
+
+    spec:
+      containers:
+        - name: envoy
+          image: juliocesarmidia/envoy-proxy-01:v1.0.0
+
+          ports:
+          - name: envoy-http
+            containerPort: 8080
+
+          - name: envoy-admin
+            containerPort: 9901
+
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "200m"
+            limits:
+              memory: "256Mi"
+              cpu: "400m"
+
+          imagePullPolicy: IfNotPresent
+
+      restartPolicy: Always

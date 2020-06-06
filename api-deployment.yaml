@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: api-deployment
+  namespace: default
+  labels:
+    app: api
+
+spec:
+  replicas: 3
+
+  selector:
+    matchLabels:
+      app: api
+
+  template:
+    metadata:
+      name: api
+      labels:
+        app: api
+
+    spec:
+      containers:
+        - name: api
+          image: juliocesarmidia/http-simple-api:v1.0.0
+
+          ports:
+            - containerPort: 8080
+              name: api-port
+
+          env:
+            - name: MESSAGE
+              valueFrom:
+                fieldRef:
+                  fieldPath: status.podIP
+
+            - name: API_PORT
+              value: "8080"
+
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "200m"
+            limits:
+              memory: "256Mi"
+              cpu: "400m"
+
+          imagePullPolicy: IfNotPresent
+
+      restartPolicy: Always
+
+# kubectl exec -it "$(kubectl get pod -n development | grep "api-deployment" | head -n 1 | cut -d' ' -f1)" -- /bin/sh -c "curl http://localhost:80"
+# kubectl logs -f "$(kubectl get pod -n development | grep "api-deployment" | head -n 1 | cut -d' ' -f1)"
