@@ -1,18 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: envoy
+  name: envoy-deployment
   namespace: default
   labels:
     app: envoy
 
 spec:
+  replicas: 1
+
   selector:
     matchLabels:
       app: envoy
 
   template:
     metadata:
+      name: envoy
       labels:
         app: envoy
 
