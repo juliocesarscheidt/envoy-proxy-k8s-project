@@ -1,11 +1,17 @@
 # Envoy proxy with K8S project
 
+[![GitHub Status](https://badgen.net/github/status/julio-cesar-development/envoy-proxy-k8s-project)](https://github.com/julio-cesar-development/envoy-proxy-k8s-project)
+
 > This is a project to try out Envoy Proxy with Kubernetes
 
 ## About
 
 > This project has a K8S deployment with 3 replicas of an API made with GoLang, a K8S headless service that resolves the DNS to the 3 replicas running on it.
 > The Envoy is used to handle requests in this DNS of the K8S headless service and do the load balancing for the pods using the LEAST_REQUEST method
+
+## Architecture
+
+![Architecture](https://raw.githubusercontent.com/julio-cesar-development/envoy-proxy-k8s-project/master/envoy.png)
 
 ## Instructions
 
