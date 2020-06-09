@@ -9,6 +9,8 @@ metadata:
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
     nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.org/lb-method: "least_conn"
+    # nginx.org/lb-method: "round_robin"
 
 spec:
   rules:
