@@ -15,13 +15,20 @@
 chmod +x ./deploy.sh && bash ./deploy.sh
 
 # to see info about K8S deployed objects
-kubectl get pod,deploy,svc,ingress -n default -o wide
+kubectl get pod,deploy,svc,ingress,limitrange -n envoy -o wide
 ```
 
-> Get the IP of Envoy service, and access it on port 80, you will see each request being redirected to a different pod
+> Access the ingress to see each request being redirected to a different pod
 
 ```bash
-kubectl get svc --selector=app=envoy -o json | jq -r '.items[].spec.clusterIP'
+curl http://localhost
+```
+
+> Or get the IP of Envoy service, and access it on port 80
+
+```bash
+ENVOY_SVC_IP=$(kubectl get svc -n envoy --selector=app=envoy -o json | jq -r '.items[].spec.clusterIP')
+curl http://${ENVOY_SVC_IP}
 ```
 
 ## Some Envoy Docs

@@ -2,7 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: api-ingress
-  namespace: default
+  namespace: envoy
 
   annotations:
     kubernetes.io/ingress.class: nginx
