@@ -39,9 +39,22 @@ curl http://${ENVOY_SVC_IP}
 
 ## Some Envoy Docs
 
-> https://www.envoyproxy.io/docs/envoy/latest/start/start
-> https://www.envoyproxy.io/docs/envoy/latest/configuration/overview/examples
-> https://github.com/envoyproxy/envoy/tree/master/examples
-> https://www.envoyproxy.io/docs/envoy/v1.5.0/intro/deployment_types/service_to_service#service-to-service-egress-listener
-> https://blog.markvincze.com/how-to-use-envoy-as-a-load-balancer-in-kubernetes/
-> https://www.envoyproxy.io/docs/envoy/latest/version_history/v1.14.0
+[https://www.envoyproxy.io/docs/envoy/latest/start/start](https://www.envoyproxy.io/docs/envoy/latest/start/start)
+
+[https://www.envoyproxy.io/docs/envoy/latest/configuration/overview/examples](https://www.envoyproxy.io/docs/envoy/latest/configuration/overview/examples)
+
+[https://github.com/envoyproxy/envoy/tree/master/examples](https://github.com/envoyproxy/envoy/tree/master/examples)
+
+[https://www.envoyproxy.io/docs/envoy/v1.5.0/intro/deployment_types/service_to_service#service-to-service-egress-listener](https://www.envoyproxy.io/docs/envoy/v1.5.0/intro/deployment_types/service_to_service#service-to-service-egress-listener)
+
+[https://blog.markvincze.com/how-to-use-envoy-as-a-load-balancer-in-kubernetes/](https://blog.markvincze.com/how-to-use-envoy-as-a-load-balancer-in-kubernetes/)
+
+[https://www.envoyproxy.io/docs/envoy/latest/version_history/v1.14.0](https://www.envoyproxy.io/docs/envoy/latest/version_history/v1.14.0)
+
+## Authors
+
+[Julio Cesar](https://github.com/julio-cesar-development)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
