@@ -1,5 +1,6 @@
 # Envoy proxy with K8S project
 
+[![Build Status](https://travis-ci.org/julio-cesar-development/envoy-proxy-k8s-project.svg)](https://travis-ci.org/julio-cesar-development/envoy-proxy-k8s-project)
 [![GitHub Status](https://badgen.net/github/status/julio-cesar-development/envoy-proxy-k8s-project)](https://github.com/julio-cesar-development/envoy-proxy-k8s-project)
 
 > This is a project to try out Envoy Proxy with Kubernetes
@@ -37,19 +38,23 @@ ENVOY_SVC_IP=$(kubectl get svc -n envoy --selector=app=envoy -o json | jq -r '.i
 curl http://${ENVOY_SVC_IP}
 ```
 
-## Some Envoy Docs
+## Docs
 
-[https://www.envoyproxy.io/docs/envoy/latest/start/start](https://www.envoyproxy.io/docs/envoy/latest/start/start)
+> Envoy
 
-[https://www.envoyproxy.io/docs/envoy/latest/configuration/overview/examples](https://www.envoyproxy.io/docs/envoy/latest/configuration/overview/examples)
+[https://www.envoyproxy.io/docs/envoy/latest/start/start](https://www.envoyproxy.io/docs/envoy/latest/start/start)<br>
+[https://www.envoyproxy.io/docs/envoy/latest/configuration/overview/examples](https://www.envoyproxy.io/docs/envoy/latest/configuration/overview/examples)<br>
+[https://github.com/envoyproxy/envoy/tree/master/examples](https://github.com/envoyproxy/envoy/tree/master/examples)<br>
+[https://www.envoyproxy.io/docs/envoy/v1.5.0/intro/deployment_types/service_to_service#service-to-service-egress-listener](https://www.envoyproxy.io/docs/envoy/v1.5.0/intro/deployment_types/service_to_service#service-to-service-egress-listener)<br>
+[https://blog.markvincze.com/how-to-use-envoy-as-a-load-balancer-in-kubernetes/](https://blog.markvincze.com/how-to-use-envoy-as-a-load-balancer-in-kubernetes/)<br>
+[https://www.envoyproxy.io/docs/envoy/latest/version_history/v1.14.0](https://www.envoyproxy.io/docs/envoy/latest/version_history/v1.14.0)<br>
 
-[https://github.com/envoyproxy/envoy/tree/master/examples](https://github.com/envoyproxy/envoy/tree/master/examples)
+> Traefik
 
-[https://www.envoyproxy.io/docs/envoy/v1.5.0/intro/deployment_types/service_to_service#service-to-service-egress-listener](https://www.envoyproxy.io/docs/envoy/v1.5.0/intro/deployment_types/service_to_service#service-to-service-egress-listener)
-
-[https://blog.markvincze.com/how-to-use-envoy-as-a-load-balancer-in-kubernetes/](https://blog.markvincze.com/how-to-use-envoy-as-a-load-balancer-in-kubernetes/)
-
-[https://www.envoyproxy.io/docs/envoy/latest/version_history/v1.14.0](https://www.envoyproxy.io/docs/envoy/latest/version_history/v1.14.0)
+[https://docs.traefik.io/routing/services/#weighted-round-robin](https://docs.traefik.io/routing/services/#weighted-round-robin)<br>
+[https://docs.traefik.io/v1.7/configuration/backends/kubernetes/](https://docs.traefik.io/v1.7/configuration/backends/kubernetes/)<br>
+[https://docs.traefik.io/routing/services/#weighted-round-robin](https://docs.traefik.io/routing/services/#weighted-round-robin)<br>
+[https://docs.traefik.io/routing/services/#weighted-round-robin](https://docs.traefik.io/routing/services/#weighted-round-robin)<br>
 
 ## Authors
 
