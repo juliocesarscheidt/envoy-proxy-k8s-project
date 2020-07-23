@@ -38,7 +38,6 @@ static_resources:
     connect_timeout: 0.25s
     type: STRICT_DNS
     lb_policy: LEAST_REQUEST
-    # lb_policy: ROUND_ROBIN
     load_assignment:
       cluster_name: api-cluster
       endpoints:
