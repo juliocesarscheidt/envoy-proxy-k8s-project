@@ -53,8 +53,7 @@ curl http://${ENVOY_SVC_IP}
 
 [https://docs.traefik.io/routing/services/#weighted-round-robin](https://docs.traefik.io/routing/services/#weighted-round-robin)<br>
 [https://docs.traefik.io/v1.7/configuration/backends/kubernetes/](https://docs.traefik.io/v1.7/configuration/backends/kubernetes/)<br>
-[https://docs.traefik.io/routing/services/#weighted-round-robin](https://docs.traefik.io/routing/services/#weighted-round-robin)<br>
-[https://docs.traefik.io/routing/services/#weighted-round-robin](https://docs.traefik.io/routing/services/#weighted-round-robin)<br>
+[https://docs.traefik.io/v1.7/user-guide/kubernetes/](https://docs.traefik.io/v1.7/user-guide/kubernetes/)<br>
 
 ## Authors
 
