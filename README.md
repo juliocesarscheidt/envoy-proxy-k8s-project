@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/julio-cesar-development/envoy-proxy-k8s-project.svg)](https://travis-ci.org/julio-cesar-development/envoy-proxy-k8s-project)
 [![GitHub Status](https://badgen.net/github/status/julio-cesar-development/envoy-proxy-k8s-project)](https://github.com/julio-cesar-development/envoy-proxy-k8s-project)
+![License](https://badgen.net/badge/license/MIT/blue)
 
 > This is a project to try out Envoy Proxy with Kubernetes
 
@@ -19,7 +20,11 @@
 > In order to run the deployments in K8S, run the script deploy.sh
 
 ```bash
-chmod +x ./deploy.sh && bash ./deploy.sh
+# Envoy needs to be running first
+kubectl apply -f ./traefik-ingress-controller.yaml
+
+chmod +x ./deploy.sh && \
+    bash ./deploy.sh
 
 # to see info about K8S deployed objects
 kubectl get pod,deploy,svc,ingress,limitrange -n envoy -o wide

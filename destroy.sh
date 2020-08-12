@@ -8,5 +8,7 @@ if [ -z "$(which kubectl)" ]; then
 fi
 
 # API objects
-kubectl delete -f ./
+kubectl delete -f ./envoy-k8s.yaml
+kubectl delete -f ./api-k8s.yaml
+
 kubectl delete ns envoy
