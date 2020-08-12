@@ -7,11 +7,12 @@ if [ -z "$(which kubectl)" ]; then
   exit 1
 fi
 
-# Envoy deployment
-kubectl apply -f ./traefik-ingress-controller.yaml
-
-# wait for Envoy
-sleep 30
+kubectl apply -f - <<EOF
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: envoy
+EOF
 
 kubectl apply -f ./envoy-k8s.yaml
 kubectl apply -f ./api-k8s.yaml

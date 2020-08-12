@@ -11,7 +11,7 @@ static_resources:
       address:
         socket_address:
           address: 0.0.0.0
-          port_value: 8080
+          port_value: 80
 
       filter_chains:
         - filters:
@@ -29,21 +29,21 @@ static_resources:
                   - match:
                       prefix: "/"
                     route:
-                      cluster: api-cluster
+                      cluster: default
               http_filters:
               - name: envoy.filters.http.router
 
   clusters:
-  - name: api-cluster
+  - name: default
     connect_timeout: 0.25s
     type: STRICT_DNS
     lb_policy: LEAST_REQUEST
     load_assignment:
-      cluster_name: api-cluster
+      cluster_name: default
       endpoints:
       - lb_endpoints:
         - endpoint:
             address:
               socket_address:
-                address: api-svc
-                port_value: 8080
+                address: api
+                port_value: 9000
