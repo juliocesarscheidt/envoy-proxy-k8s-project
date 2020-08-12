@@ -20,7 +20,7 @@
 > In order to run the deployments in K8S, run the script deploy.sh
 
 ```bash
-# Envoy needs to be running first
+# Traefik controller needs to be running first
 kubectl apply -f ./traefik-ingress-controller.yaml
 
 chmod +x ./deploy.sh && \
