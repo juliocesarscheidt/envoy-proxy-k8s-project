@@ -2,8 +2,9 @@ version: "3.4"
 
 services:
   proxy:
+    container_name: proxy
     build:
-      context: .
+      context: ./envoy/
       dockerfile: envoy.Dockerfile
     networks:
       envoymesh:
@@ -54,3 +55,4 @@ services:
 
 networks:
   envoymesh:
+    driver: bridge

@@ -75,7 +75,7 @@ metadata:
     ingress.kubernetes.io/force-ssl-redirect: "false"
     kubernetes.io/ingress.class: traefik
     traefik.ingress.kubernetes.io/rewrite-target: /
-    traefik.ingress.kubernetes.io/load-balancer-method: "wrr"
+    traefik.ingress.kubernetes.io/load-balancer-method: "wrr" # weighted round robin
 
 spec:
   rules:

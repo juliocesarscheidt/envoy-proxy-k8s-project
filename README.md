@@ -1,6 +1,6 @@
 # Envoy proxy with K8S project
 
-[![Build Status](https://travis-ci.org/julio-cesar-development/envoy-proxy-k8s-project.svg)](https://travis-ci.org/julio-cesar-development/envoy-proxy-k8s-project)
+[![Build Status](https://travis-ci.com/julio-cesar-development/envoy-proxy-k8s-project.svg)](https://travis-ci.com/julio-cesar-development/envoy-proxy-k8s-project)
 [![GitHub Status](https://badgen.net/github/status/julio-cesar-development/envoy-proxy-k8s-project)](https://github.com/julio-cesar-development/envoy-proxy-k8s-project)
 ![License](https://badgen.net/badge/license/MIT/blue)
 
@@ -17,12 +17,15 @@
 
 ## Instructions
 
+> Running locally with docker
+
+```bash
+docker-compose up -d
+```
+
 > In order to run the deployments in K8S, run the script deploy.sh
 
 ```bash
-# Traefik controller needs to be running first
-kubectl apply -f ./traefik-ingress-controller.yaml
-
 chmod +x ./deploy.sh && \
     bash ./deploy.sh
 
@@ -47,18 +50,25 @@ curl http://${ENVOY_SVC_IP}
 
 > Envoy
 
-[https://www.envoyproxy.io/docs/envoy/latest/start/start](https://www.envoyproxy.io/docs/envoy/latest/start/start)<br>
-[https://www.envoyproxy.io/docs/envoy/latest/configuration/overview/examples](https://www.envoyproxy.io/docs/envoy/latest/configuration/overview/examples)<br>
-[https://github.com/envoyproxy/envoy/tree/master/examples](https://github.com/envoyproxy/envoy/tree/master/examples)<br>
-[https://www.envoyproxy.io/docs/envoy/v1.5.0/intro/deployment_types/service_to_service#service-to-service-egress-listener](https://www.envoyproxy.io/docs/envoy/v1.5.0/intro/deployment_types/service_to_service#service-to-service-egress-listener)<br>
-[https://blog.markvincze.com/how-to-use-envoy-as-a-load-balancer-in-kubernetes/](https://blog.markvincze.com/how-to-use-envoy-as-a-load-balancer-in-kubernetes/)<br>
-[https://www.envoyproxy.io/docs/envoy/latest/version_history/v1.14.0](https://www.envoyproxy.io/docs/envoy/latest/version_history/v1.14.0)<br>
+<https://www.envoyproxy.io/docs/envoy/latest/start/start>
+
+<https://www.envoyproxy.io/docs/envoy/latest/configuration/overview/examples>
+
+<https://github.com/envoyproxy/envoy/tree/master/examples>
+
+<https://www.envoyproxy.io/docs/envoy/v1.5.0/intro/deployment_types/service_to_service#service-to-service-egress-listener>
+
+<https://blog.markvincze.com/how-to-use-envoy-as-a-load-balancer-in-kubernetes>
+
+<https://www.envoyproxy.io/docs/envoy/latest/version_history/v1.14.0>
 
 > Traefik
 
-[https://docs.traefik.io/routing/services/#weighted-round-robin](https://docs.traefik.io/routing/services/#weighted-round-robin)<br>
-[https://docs.traefik.io/v1.7/configuration/backends/kubernetes/](https://docs.traefik.io/v1.7/configuration/backends/kubernetes/)<br>
-[https://docs.traefik.io/v1.7/user-guide/kubernetes/](https://docs.traefik.io/v1.7/user-guide/kubernetes/)<br>
+<https://docs.traefik.io/routing/services/#weighted-round-robin>
+
+<https://docs.traefik.io/v1.7/configuration/backends/kubernetes/>
+
+<https://docs.traefik.io/v1.7/user-guide/kubernetes/>
 
 ## Authors
 

@@ -16,9 +16,10 @@ spec:
       cpu: "200m"
     type: Container
 
-# Limits:
-#   cpu:     400m
-#   memory:  256Mi
-# Requests:
-#   cpu:     200m
-#   memory:  128Mi
+# limits from API pods
+# requests:
+#   memory: "128Mi"
+#   cpu: "200m"
+# limits:
+#   memory: "256Mi"
+#   cpu: "400m"
