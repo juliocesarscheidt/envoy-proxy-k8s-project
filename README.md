@@ -13,7 +13,7 @@
 
 ## Architecture
 
-![Architecture](https://raw.githubusercontent.com/julio-cesar-development/envoy-proxy-k8s-project/master/envoy.png)
+![Architecture](./images/envoy.png)
 
 ## Instructions
 
