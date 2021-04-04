@@ -1,7 +1,7 @@
 # Envoy proxy with K8S project
 
-[![Build Status](https://travis-ci.com/julio-cesar-development/envoy-proxy-k8s-project.svg)](https://travis-ci.com/julio-cesar-development/envoy-proxy-k8s-project)
-[![GitHub Status](https://badgen.net/github/status/julio-cesar-development/envoy-proxy-k8s-project)](https://github.com/julio-cesar-development/envoy-proxy-k8s-project)
+[![Build Status](https://travis-ci.com/juliocesarscheidt/envoy-proxy-k8s-project.svg)](https://travis-ci.com/juliocesarscheidt/envoy-proxy-k8s-project)
+[![GitHub Status](https://badgen.net/github/status/juliocesarscheidt/envoy-proxy-k8s-project)](https://github.com/juliocesarscheidt/envoy-proxy-k8s-project)
 ![License](https://badgen.net/badge/license/MIT/blue)
 
 > This is a project to try out Envoy Proxy with Kubernetes
@@ -72,7 +72,7 @@ curl http://${ENVOY_SVC_IP}
 
 ## Authors
 
-[Julio Cesar](https://github.com/julio-cesar-development)
+[Julio Cesar](https://github.com/juliocesarscheidt)
 
 ## License
 
