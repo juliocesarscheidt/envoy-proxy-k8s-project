@@ -26,15 +26,6 @@ before_install:
 
 script:
   - |
-    # shell linter
-    docker container run \
-      --name shellcheck \
-      --rm -v "$PWD:/mnt" \
-      -w /mnt -it \
-      koalaman/shellcheck-alpine:stable shellcheck deploy.sh
-
-after_success:
-  - |
     echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
     docker image push juliocesarmidia/envoy-proxy-01:$SHA
